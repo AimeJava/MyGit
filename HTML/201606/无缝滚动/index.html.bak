@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .div1{position:relative;top:0px;height:700px;overflow:hidden;
+  border:1px solid #ff0000;border-radius:700px;margin:0 auto}
+  .div1 ul{position:absolute;left:0px;top:0px;}
+  .div1 ul li{float:left;list-style:none;width:700px;height:1050px}
+  .div1 ul li img:hover{position:relative;top:-2px}
+  </style>
+  <script>
+  window.onload=function(){
+  var oul=document.getElementsByTagName("ul")[0];
+  var ali=oul.getElementsByTagName("li");
+  oul.innerHTML+=oul.innerHTML;
+  oul.style.width=ali[0].offsetWidth*ali.length+"px";
+  var ispeed=-5;
+  var timer=null;
+  timer=setInterval(function(){
+  oul.style.left=oul.offsetLeft+ispeed+"px"
+  if(oul.offsetLeft<-oul.offsetWidth/2){
+  oul.style.left="0px";
+  }
+  },30)
+  oul.onmouseover=function(){
+  clearInterval(timer);
+  }
+  oul.onmouseout=function(){
+  timer=setInterval(function(){
+  oul.style.left=oul.offsetLeft+ispeed+"px"
+  if(oul.offsetLeft<-oul.offsetWidth/2){
+  oul.style.left="0px";
+  }
+  },30)
+  }
+  }
+  </script>
+ </head>
+ <body>
+<div id="div1" class="div1">
+ <ul>
+ <li><img src="1.jpg"/></li>
+ <li><img src="2.jpg"/></li>
+ <li><img src="3.jpg"/></li>
+ <li><img src="4.jpg"/></li>
+ <li><img src="5.jpg"/></li>
+ <li><img src="6.jpg"/></li>
+ </ul> 
+</div>
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  body{font-size:2em}
+  #clock{width:500px;height:300px;background-color:#ff6633;position:absolute;left:500px}
+  </style>
+  <script language="javascript">
+  function systime(){
+  var now=new Date();//创建date对象
+  var year=now.getYear()+1900;//调取年
+  var mon=now.getMonth()+1;//调取月
+  var date=now.getDate();//调取日
+  var hour=now.getHours();//调取小时
+  var minutes=now.getMinutes();//调取分钟
+  var sec=now.getSeconds();//调取秒
+  var day=now.getDay();//调取星期几，day代表本周第几天，【0到6】
+  var arr_week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  var week=arr_week[day];
+  var time=(year+"年"+mon+"月"+date+"日 "+hour+":"+minutes+":"+sec+week);
+  document.getElementById("clock").innerHTML="当前时间："+time;
+  };
+  window.onload=function(){
+  window.setInterval(systime,1000);
+  }
+  </script>
+ </head>
+ <body>
+  <div id="clock"></div>
+ </body>
+</html>

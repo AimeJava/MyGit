@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .div1{width:100px;height:200px;background-color:#ffffcc;position:absolute;left:-100px;border-radius:5px}
+  .div2{width:30px;height:60px;background-color:#ff6600;position:absolute;left:100px;top:70px;text-align:center;border-radius:5px}
+  .div1 ul{}
+  .div1 ul li{list-style:none;padding-left:0px;float:left;border:1px solid;border-radius:10px;margin:3px}
+  .div1 ul li a{text-decoration:none;font-size:16px;}
+  .div1 ul li a:hover{color:#ff3300;font-size:20px}
+  </style>
+  <script>
+  var timer=null;
+  function starmove(){
+	  clearInterval(timer);
+  var star=document.getElementById("div1");
+  var timer=setInterval(function mov(){
+    if(star.offsetLeft==0){
+  clearInterval(timer);
+  }
+  else{
+  star.style.left=star.offsetLeft+5+'px';
+  }
+  },30);
+  }
+   function starmove2(){
+	   clearInterval(timer);
+  var star=document.getElementById("div1");
+  var timer=setInterval(function mov(){
+    if(star.offsetLeft==-100){
+   clearInterval(timer); 
+  }
+  else{
+star.style.left=star.offsetLeft-5+'px';
+  }
+  },30);
+  }
+   </script>
+ </head>
+ <body>
+  <div class="div1" id="div1"onmouseover="starmove()"onmouseout="starmove2()">
+<ul>
+<li><a href="http://www.baidu.com">百度</a></li>
+<li><a href="http://www.qq.com">腾讯</a></li>
+<li><a href="http://www.alibaba.com">阿里巴巴</a></li>
+</ul>
+<div class="div2" id="div2" onmouseover="starmove()" onmouseout="starmove2()">
+     分享到 </div>
+ </body>
+</div>
+ 
+</html>

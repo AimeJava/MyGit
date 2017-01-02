@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script src="E:\HTML5\js\Ajax\ajax.js"></script>
+  <script>
+  window.onload=function(){
+	var btn1=document.getElementById("btn1");
+	var div1=document.getElementById("div1");
+	btn1.onclick=function(){
+		ajax("http://localhost:8080/1.txt",function(args){
+			div1.innerHTML=args;
+		});
+	}
+  }
+  </script>
+ </HEAD>
+
+<BODY>
+  <input id="btn1" type="button" value="¶ÁÈ¡" />
+  <div id="div1"></div>
+ </BODY>
+</HTML>

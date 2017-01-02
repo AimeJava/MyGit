@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ <script>   
+   window.onload=function(){
+   var music=document.getElementById("music_chen");
+   var play=document.getElementById("music");
+   play.onclick=function(){
+   if(music.paused){
+   music.play()
+   }else{
+   music.pause()
+   }
+   }
+   }
+  </script>
+ </head>
+ <body>
+ <form>
+  <input type="button" value="播放/暂停" id="music"></input>
+ </form>
+  <audio src="陈百强 - 偏偏喜欢你.mp3" id="music_chen" ></audio>
+ </body>
+</html>
